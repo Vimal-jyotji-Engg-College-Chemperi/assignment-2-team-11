@@ -1,14 +1,14 @@
-**Suzuki–Kasami’s Broadcast Algorithm in IoT Network
-Overview
-**
+**Suzuki–Kasami’s Broadcast Algorithm in IoT Network**
+**Overview**
+
 This is a modular implementation of Suzuki–Kasami’s Broadcast Mutual Exclusion Algorithm, designed to simulate controlled access to shared resources in IoT-based distributed systems.
 
 The algorithm ensures that only one IoT node can access the critical section at any given time, maintaining consistency and coordination across connected devices.
 
 This implementation is built using Python and follows an Object-Oriented Programming (OOP) approach.
 
-**Algorithm Description
-**
+**Algorithm Description**
+
 Suzuki–Kasami’s algorithm is a token-based distributed mutual exclusion algorithm introduced by Suzuki and Kasami in 1985.
 
 It uses:
@@ -25,23 +25,23 @@ It uses:
 
 Unlike permission-based algorithms, Suzuki–Kasami’s algorithm allows a process to enter the critical section only if it holds the TOKEN.
 
-**Key Features
+**Key Features**
 
-Fully Distributed (No central coordinator)
+- Fully Distributed (No central coordinator)
 
-Token-based mutual exclusion
+- Token-based mutual exclusion
 
-Reduced message complexity compared to permission-based algorithms
+- Reduced message complexity compared to permission-based algorithms
 
-Efficient for IoT networks
+- Efficient for IoT networks
 
-Deadlock-free
+- Deadlock-free
 
-Starvation-free
+- Starvation-free
 
-Object-Oriented implementation
+- Object-Oriented implementation
 
-Project Structure
+**Project Structure**
 suzuki-kasami-assignment/
 
 ├── suzuki_kasami.py   # Contains SuzukiKasamiProcess class  
@@ -284,4 +284,5 @@ Conclusion
 This demonstrates a complete implementation of Suzuki–Kasami’s Broadcast Mutual Exclusion Algorithm for IoT networks.
 
 The simulation ensures safe and efficient access to shared IoT resources using a token-based mechanism and broadcast communication, making it suitable for understanding distributed synchronization in IoT environments.
+
 
