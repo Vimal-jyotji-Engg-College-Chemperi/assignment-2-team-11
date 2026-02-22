@@ -219,14 +219,19 @@ Every requesting node eventually receives TOKEN.
 **Future Improvements**
 
 -Add token recovery mechanism
+
 -Add fault tolerance
+
 -Simulate network delays and packet loss
+
 -Add visualization dashboard
+
 -Add performance comparison with Lamport’s algorithm
 
 **Conclusion**
 
 This demonstrates a complete implementation of Suzuki–Kasami’s Broadcast Mutual Exclusion Algorithm for IoT networks.The simulation ensures safe and efficient access to shared IoT resources using a token-based mechanism and broadcast communication, making it suitable for understanding distributed synchronization in IoT environments.
+
 
 
 
