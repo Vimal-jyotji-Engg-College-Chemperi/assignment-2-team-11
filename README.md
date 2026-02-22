@@ -89,6 +89,7 @@ python main.py
 The program will simulate multiple IoT nodes requesting access to a shared resource.
 
 **How the Algorithm Works**
+
 **1️⃣ Initialization**
 
 - Create N IoT nodes
@@ -100,8 +101,11 @@ The program will simulate multiple IoT nodes requesting access to a shared resou
 **2️⃣ Requesting Critical Section**
 
  When a node wants to enter:
+ 
    1.Increment its request number
+   
    2.Broadcast REQUEST(node_id, sequence_number) to all other nodes
+   
    3.Wait until it receives the TOKEN
 
 **3️⃣ Receiving a Request**
@@ -109,7 +113,9 @@ The program will simulate multiple IoT nodes requesting access to a shared resou
 Upon receiving a REQUEST:
 
   1.Update RN[sender] = received_sequence_number
+  
   2.If the node holds the TOKEN and is not in critical section:
+  
 -       Send TOKEN to requesting node
 
 **4️⃣ Entering Critical Section**
@@ -122,9 +128,13 @@ No need to wait for permissions from all nodes.
 
 After execution:
 
+
 1.Update LN[node_id] inside TOKEN
+
 2.Check RN array for pending requests
+
 3.Add eligible nodes to TOKEN queue
+
 4.Pass TOKEN to next node in queue
 
 **Example Execution Flow**
@@ -161,6 +171,7 @@ This is more efficient than permission-based algorithms like Lamport’s.
 **Class: SuzukiKasamiProcess**
 
 **Constructor**
+
 SuzukiKasamiProcess(pid: int, total_nodes: int)
 
 Parameters:
@@ -168,53 +179,78 @@ Parameters:
 -  total_nodes → Total number of IoT nodes in the network
 
 **Methods**
+
 **request_critical_section()**
+
 Broadcasts request and waits for TOKEN.
+
 **receive_request(sequence_number, sender_pid)**
+
 Handles incoming request and updates RN array.
+
 **receive_token(token)**
+
 Receives TOKEN and enters critical section if eligible.
+
 **enter_critical_section()**
+
 Executes critical section.
+
 **release_critical_section()**
+
 Updates LN and passes TOKEN to next node.
 
 **System Properties**
 
 **Mutual Exclusion**
+
 Only one IoT node accesses shared resource at a time.
 
 **Fairness**
+
 Requests are handled in sequence number order.
 
 **Deadlock-Free**
+
 No circular waiting occurs.
 
 **Starvation-Free**
+
 Every requesting node eventually receives TOKEN.
 
 **Applications in IoT Network**
 
--Smart home device coordination
--Sensor data synchronization
--Distributed IoT transaction management
--Edge device resource sharing
--Industrial IoT automation
+-  Smart home device coordination
+  
+-  Sensor data synchronization
+  
+-  Distributed IoT transaction management
+  
+-  Edge device resource sharing
+  
+-  Industrial IoT automation
 
 **Advantages**
 
--Lower message overhead than permission-based algorithms
--Efficient for moderate-sized IoT networks
--Simple token management
--No need for global clock synchronization
--Suitable for wireless broadcast environments
+-  Lower message overhead than permission-based algorithms
+  
+-  Efficient for moderate-sized IoT networks
+  
+-  Simple token management
+  
+-  No need for global clock synchronization\
+  
+-  Suitable for wireless broadcast environments
 
 **Limitations**
 
--Token loss can block system
--Not fault tolerant by default
--Not ideal for very large-scale IoT networks
--Requires reliable message delivery
+-  Token loss can block system
+  
+-  Not fault tolerant by default
+  
+-  Not ideal for very large-scale IoT networks
+  
+-  Requires reliable message delivery
 
 **Future Improvements**
 
@@ -231,6 +267,7 @@ Every requesting node eventually receives TOKEN.
 **Conclusion**
 
 This demonstrates a complete implementation of Suzuki–Kasami’s Broadcast Mutual Exclusion Algorithm for IoT networks.The simulation ensures safe and efficient access to shared IoT resources using a token-based mechanism and broadcast communication, making it suitable for understanding distributed synchronization in IoT environments.
+
 
 
 
