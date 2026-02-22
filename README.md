@@ -59,13 +59,13 @@ Entering and exiting critical section
 
 **2️⃣ main.py – Execution File**
 
--Creates multiple IoT node objects
+-   Creates multiple IoT node objects
 
--Simulates distributed IoT devices using threads
+-   Simulates distributed IoT devices using threads
 
--Starts request-execute-release cycle
+-   Starts request-execute-release cycle
 
--Displays system behavior
+-   Displays system behavior
 
 **Installation & Setup**
 **Prerequisites**
@@ -81,6 +81,7 @@ Navigate to the directory:
 cd suzuki-kasami-assignment
 
 **Usage**
+
 Run the simulation:
 
 python main.py
@@ -226,6 +227,7 @@ Every requesting node eventually receives TOKEN.
 **Conclusion**
 
 This demonstrates a complete implementation of Suzuki–Kasami’s Broadcast Mutual Exclusion Algorithm for IoT networks.The simulation ensures safe and efficient access to shared IoT resources using a token-based mechanism and broadcast communication, making it suitable for understanding distributed synchronization in IoT environments.
+
 
 
 
