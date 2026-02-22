@@ -76,7 +76,9 @@ Entering and exiting critical section
 **Installation**
 
 Download or clone the project folder.
+
 Navigate to the directory:
+
 
 cd suzuki-kasami-assignment
 
@@ -267,6 +269,7 @@ Every requesting node eventually receives TOKEN.
 **Conclusion**
 
 This demonstrates a complete implementation of Suzuki–Kasami’s Broadcast Mutual Exclusion Algorithm for IoT networks.The simulation ensures safe and efficient access to shared IoT resources using a token-based mechanism and broadcast communication, making it suitable for understanding distributed synchronization in IoT environments.
+
 
 
 
